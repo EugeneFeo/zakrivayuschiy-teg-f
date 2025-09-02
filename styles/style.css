@@ -11,6 +11,173 @@
 */
 
 .page {
+  font-family: var(--main-font, 'Inter-Variable'), sans-serif;
+  font-variation-settings: "wght" var(--font-weight-text);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: var(--bg-fixed);
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+.content {
+  inline-size: var(--block-width);
+  border: var(--main-border);
+  margin: auto;
+  background-color: var(--main-bg-color);
+}
+
+/* Шапка сайта */
+
+.header {
+  font-family: var(--accent-font, 'PressStart2P'), sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-block: 130px;
+  
+}
+
+.header-logo {
+  font-size: clamp(3.0625rem, 0rem + 14.2857vw, 4.0625rem);
+}
+
+.header-title {
+  font-size: clamp(0.875rem, 0rem + 6.6667vw, 1.4375rem);
+}
+
+/* Основная часть сайта с карточками*/
+
+.main-content {
+  margin-block-start: 96px;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.card {
+  inline-size: var(--block-width);
+}
+
+.card-header {
+  font-weight: var(--font-weight-header);
+  font-size: 18px;
+  color: #000;
+  padding-inline: 10px;
+  padding-block: 5px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.card-image {
+  display: block;
+  max-block-size: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-label {
+  font-family: var(--accent-font, 'PressStart2P'), sans-serif;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  mix-blend-mode: hard-light;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #000;
+  opacity: 0.5;
+  text-shadow: 0 0 1px var(--label-shadow-color);
+}
+
+@supports (-webkit-text-stroke: 1px var(--label-shadow-color)) or (text-stroke: 1px var(--label-shadow-color)) {
+  .card-label {
+    -webkit-text-stroke: 1px var(--label-shadow-color);
+    text-stroke: 1px var(--label-shadow-color);
+    text-shadow: none;
+  }
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.card-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.card-text-container p {
+  font-weight: var(--font-weight-text);
+  font-size: 18px;
+  line-height: 117%;
+  color: #000;
+}
+
+.card-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  margin-block-start: 25px;
+}
+
+.card__like-button {
+  padding: 8px 35px;
+  border: var(--main-border);
+  cursor: pointer;
+}
+
+.card__icon-button {
+  border: var(--main-border);
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  padding: 0;
+}
+
+.button__text {
+  font-family: var(--accent-font, 'PressStart2P'), sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 90%;
+  color: #000;
+}
+
+.button-save__text {
+  margin-inline-start: 8px;
+}
+
+/* Подвал сайта с кнопкой */
+
+.footer {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.footer-button {
+  margin-block: 50px 100px;
+  padding-inline: 20px;
+  padding-block: 20.5px;
+  background: #fff;
+}
+
+
