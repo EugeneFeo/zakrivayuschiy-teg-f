@@ -12,6 +12,8 @@
   --label-shadow-color: rgba(255 255 255 / 0.5);  
   --block-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   --main-color: #000;
+  --secondary-color: #fff;
+  --contour-color: #000;
   --animation-fill-color: #ff0000;
   --main-border: 2px solid var(--main-color);
 }
