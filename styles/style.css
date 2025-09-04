@@ -1,13 +1,9 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
+/* Основные стили и соглашения по классам, нужным для JS:
+  like-icon — svg-иконка сердца (анимации)
+  card__like-button — кнопка Like рядом с иконкой
+  card__icon-button — кнопка-обёртка для иконки
+  is-liked — состояние лайкнутого сердца
+  button__text — текст внутри кнопок
 */
 
 .page {
@@ -40,7 +36,7 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding-block: 130px; 
+  padding-block: 130px;
   margin-block-start: 100px;
 }
 
@@ -52,7 +48,7 @@
   font-size: clamp(0.875rem, 0rem + 6.6667vw, 1.4375rem);
 }
 
-/* Основная часть сайта с карточками*/
+/* Основная часть сайта с карточками */
 
 .main-content {
   margin-block-start: 96px;
@@ -82,7 +78,7 @@
 
 .card-image {
   display: block;
-  max-block-size: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);;
+  max-block-size: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
@@ -148,14 +144,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; 
+  text-align: center;
 }
 
 .card__icon-button {
   background-color: transparent;
   color: var(--main-color);
-  cursor: pointer;
+  border: none;
   padding: 0;
+  cursor: pointer;
 }
 
 .button__text {
@@ -163,7 +160,6 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 90%;
-  
 }
 
 .button-save__text {
@@ -277,65 +273,35 @@
   }
 
   .close-button {
-  padding: 10.5px 114.5px;
-  } 
+    padding: 10.5px 114.5px;
+  }
 }
 
 /* Фильтры карточек */
 
-.hue-rotate-filter {
+.hue-rotate-filter { 
   filter: hue-rotate(310deg);
 }
-
-.saturate-filter {
+.saturate-filter { 
   filter: saturate(280%) contrast(80%);
 }
-
 .sepia-filter {
-    filter: sepia(40%);
+  filter: sepia(40%);
 }
-
 .contrast-filter {
-    filter: contrast(80%);
+  filter: contrast(80%);
 }
-
 .grayscale-filter {
-    filter: grayscale(0.8);
+  filter: grayscale(0.8);
 }
-
 .invert-filter {
-    filter: invert(10%) saturate(200%) sepia(30%);
-} 
-
+  filter: invert(10%) saturate(200%) sepia(30%);
+}
 .brightness-filter {
   filter: brightness(80%);
 }
 
 /* Эффекты кнопок */
-
-/* .button {
-  position: relative;
-  overflow: hidden;
-  background:
-    linear-gradient(90deg, var(--main-color), var(--main-color)) 0 0 / 0% 100% no-repeat,
-    var(--secondary-color);
-  color: var(--main-color);
-  transition: 0.5s ease-in-out;
-}
-
-.button:hover {
-  background-size: 100% 100%, auto;
-}
-
-.button > span {
-  position: relative;
-  z-index: 1;
-  transition: color .5s ease-in-out;
-}
-
-.button:hover > span {
-  color: var(--secondary-color); 
-} */
 
 .button {
   position: relative;
@@ -361,10 +327,6 @@
   mix-blend-mode: difference;
 }
 
-.bottom-button {
-  color: var(--main-color);
-}
-
 .bottom-button:hover {
   color: var(--secondary-color);
 }
@@ -380,20 +342,13 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: var(--main-border); 
+  outline: var(--main-border);
 }
 
 /* Кнопка с сердцем */
 
 .like-icon {
   display: block;
-}
-
-.card__icon-button {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
 }
 
 .sparks {
@@ -403,17 +358,14 @@
 /* Анимация сердца */
 
 .contour {
-  /* fill: var(--contour-color); */
   transition: fill 0.1s linear;
 }
 
 .core {
-  /* fill: transparent; */
   transition: fill 0.3s linear 0.03s;
 }
 
 .main-body {
-  /* fill: transparent; */
   transition: fill 0.3s linear;
 }
 
@@ -452,7 +404,7 @@
   transition: fill 0.3s linear 0.06s;
 }
 
-.like-icon.is-liked .heart  {
+.like-icon.is-liked .heart {
   animation: heart-scale 0.3s ease-in 0.1s;
   transform-origin: center;
 }
@@ -460,4 +412,3 @@
 .like-icon.is-liked .sparks {
   animation: heart-sparks 0.3s ease-in 0.3s;
 }
-
