@@ -146,6 +146,7 @@
   align-items: center;
   text-align: center;
   background-color: transparent;
+  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button {
@@ -281,21 +282,27 @@
 .hue-rotate-filter { 
   filter: hue-rotate(310deg);
 }
+
 .saturate-filter { 
   filter: saturate(280%) contrast(80%);
 }
+
 .sepia-filter {
   filter: sepia(40%);
 }
+
 .contrast-filter {
   filter: contrast(80%);
 }
+
 .grayscale-filter {
   filter: grayscale(0.8);
 }
+
 .invert-filter {
   filter: invert(10%) saturate(200%) sepia(30%);
 }
+
 .brightness-filter {
   filter: brightness(80%);
 }
@@ -341,7 +348,6 @@
 
 .card__like-button:focus-visible {
   box-shadow: 2px 2px 0 0 #000;
-  transition: 0.3s ease;
 }
 
 .card__icon-button:focus-visible {
