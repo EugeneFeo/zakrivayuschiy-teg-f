@@ -8,7 +8,7 @@
 
 .page {
   font-family: var(--main-font, 'Inter-Variable'), sans-serif;
-  font-variation-settings: var(--font-weight-text);
+  font-variation-settings: var(--font-weight-text, 'wght' 400);
   min-inline-size: 320px;
   min-block-size: 100vh;
   background-image: var(--bg-fixed);
@@ -279,11 +279,11 @@
 
 /* Фильтры карточек */
 
-.hue-rotate-filter { 
+.hue-rotate-filter {
   filter: hue-rotate(310deg);
 }
 
-.saturate-filter { 
+.saturate-filter {
   filter: saturate(280%) contrast(80%);
 }
 
