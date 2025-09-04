@@ -41,11 +41,11 @@
 }
 
 .header-logo {
-  font-size: clamp(3.0625rem, 0rem + 14.2857vw, 4.0625rem);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
 .header-title {
-  font-size: clamp(0.875rem, 0rem + 6.6667vw, 1.4375rem);
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
 /* Основная часть сайта с карточками */
@@ -145,6 +145,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: transparent;
 }
 
 .card__icon-button {
@@ -185,6 +186,7 @@
   padding-block: 18.5px;
   border: var(--main-border);
   color: var(--main-color);
+  background-color: var(--secondary-color);
 }
 
 .floppy-image {
@@ -197,9 +199,6 @@
 /* Диалоговое окно */
 
 .dialog-floppy[open] {
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  place-items: center;
   padding: 0;
 }
 
@@ -230,7 +229,7 @@
 .dialog-container-info .info-text {
   font-family: var(--accent-font, 'PressStart2P'), sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
   line-height: 150%;
   text-transform: uppercase;
 }
@@ -331,9 +330,13 @@
   color: var(--secondary-color);
 }
 
-.floppy-image,
-.floppy-image use {
-  color: inherit;
+.button .floppy-image {
+  color: #fff;
+  mix-blend-mode: difference
+}
+
+.card__like-button:focus {
+  outline: none;
 }
 
 .card__like-button:focus-visible {
