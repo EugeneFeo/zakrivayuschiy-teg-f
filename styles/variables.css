@@ -9,7 +9,12 @@
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(#e7e7e7, #e7e7e7 0.01%, #1a1a1a);
-  --label-shadow-color: rgba(255 255 255 / 0.5);
+  --shadow-color: rgba(255 255 255 / 0.5);
+  --label-outline-shadow: 
+    1px 0 0 var(--label-shadow-color),
+   -1px 0 0 var(--label-shadow-color),
+    0 1px 0 var(--label-shadow-color),
+    0 -1px 0 var(--label-shadow-color);
   --block-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   --main-color: #000;
   --secondary-color: #fff;
