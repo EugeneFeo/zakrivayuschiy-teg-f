@@ -8,7 +8,7 @@
 
 .page {
   font-family: var(--main-font, 'Inter-Variable'), sans-serif;
-  font-variation-settings: var(--font-weight-text, 'wght' 400);
+  font-variation-settings: 'wght' var(--font-weight-text);
   min-inline-size: 320px;
   min-block-size: 100vh;
   background-image: var(--bg-fixed);
@@ -65,7 +65,7 @@
 }
 
 .card-header {
-  font-weight: var(--font-weight-header);
+  font-variation-settings: "wght" var(--font-weight-header);
   font-size: 18px;
   color: var(--main-color);
   padding-inline: 10px;
