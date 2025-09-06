@@ -102,10 +102,10 @@
   text-shadow: var(--label-outline-shadow);
 }
 
-@supports (-webkit-text-stroke: 1px var(--shadow-color)) or (text-stroke: 1px var(--shadow-color)) {
+@supports (-webkit-text-stroke: 1px rgba(255 255 255 / 0.5)) or (text-stroke: 1px rgba(255 255 255 / 0.5)) {
   .card-label {
-    -webkit-text-stroke: 1px var(--shadow-color);
-    text-stroke: 1px var(--shadow-color);
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
     text-shadow: none;
   }
 }
@@ -149,7 +149,6 @@
   align-items: center;
   text-align: center;
   background-color: transparent;
-  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button {
